@@ -1,6 +1,6 @@
 defmodule Rumbl.Auth do
   import Plug.Conn
-  import Comeonin.Argon2, only: [checkpw: 2, dummy_checkpw: 0]
+  import Comeonin.Pbkdf2, only: [checkpw: 2, dummy_checkpw: 0]
   require Logger
 
   def init(opts) do
