@@ -34,4 +34,8 @@ defmodule Rumbl.Auth do
         {:error, :not_cound, conn}
     end
   end
+
+  def logout(conn) do
+    configure_session(conn, drop: true)
+  end
 end
